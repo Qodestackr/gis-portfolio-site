@@ -37,7 +37,8 @@ function Profile() {
         <img
           src="https://via.placeholder.com/150"
           alt="Profile"
-          className="w-32 h-32 rounded-full mx-auto mb-4" />
+          className="w-32 h-32 rounded-full mx-auto mb-4"
+        />
         {isEditing ? (
           <form>
             <Input
@@ -46,34 +47,40 @@ function Profile() {
               name="first_name"
               value={user.first_name}
               onChange={handleInputChange}
-              required />
+              required
+            />
             <Input
               label="Last Name"
               type="text"
               name="last_name"
               value={user.last_name}
               onChange={handleInputChange}
-              required />
+              required
+            />
             <Input
               label="Email"
               type="email"
               name="email"
               value={user.email}
               onChange={handleInputChange}
-              required />
+              required
+            />
             <Input
               label="Home Address"
               type="text"
               name="home_address"
               value={user.home_address}
-              onChange={handleInputChange} />
+              onChange={handleInputChange}
+            />
             <Input
               label="Phone Number"
               type="text"
               name="phone_number"
               value={user.phone_number}
               onChange={handleInputChange}
-              required />
+              required
+            />
+
             {/* LOC */}
             <div className="mb-6">
               <label
@@ -90,11 +97,12 @@ function Profile() {
                   value={`${user.location.coordinates[1]}, ${user.location.coordinates[0]}`}
                   className="mt-1 px-4 py-2 flex-grow border rounded-md focus:ring-[#23272F] focus:border-[#23272F] border-gray-300"
                   required
-                  disabled />
-                {/* You can keep the "Locate Me" button as it is */}
+                  disabled
+                />
               </div>
             </div>
             {/*  */}
+
             <div className="flex justify-center space-x-4 mb-4">
               <button
                 onClick={handleSaveClick}
