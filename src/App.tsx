@@ -1,10 +1,11 @@
+import AppLayout from './AppLayout'
 
-const App = () => {
+function App() {
   return (
-    <div>
-      GIS.Portfolio
-    </div>
+    <AppLayout>
+      {/* CHILDREN HERE */}
+    </AppLayout>
   );
-};
+}
 
-export default App;
+export default App; 
