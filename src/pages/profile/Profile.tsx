@@ -3,6 +3,7 @@ import Input from "../../components/common/Input";
 
 function Profile() {
   const [isEditing, setIsEditing] = useState(false);
+  // hardcoded
   const [user, setUser] = useState({
     id: 3,
     username: "newuser",
@@ -104,12 +105,14 @@ function Profile() {
             {/*  */}
 
             <div className="flex justify-center space-x-4 mb-4">
+
               <button
                 onClick={handleSaveClick}
-                className="px-6 py-3 rounded-md bg-indigo-600 text-white font-semibold hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="px-6 py-3 rounded-md bg-green-600 text-white font-semibold hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500"
               >
                 Save
               </button>
+
               <button
                 onClick={() => setIsEditing(false)} // Cancel button to exit edit mode without saving
                 className="px-6 py-3 rounded-md bg-red-500 text-white font-semibold hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
@@ -137,7 +140,7 @@ function Profile() {
             <div className="flex justify-center space-x-4 mb-4">
               <button
                 onClick={handleEditClick}
-                className="px-6 py-3 rounded-md bg-indigo-600 text-white font-semibold hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="px-6 py-3 rounded-md bg-green-600 text-white font-semibold hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500"
               >
                 Edit
               </button>
