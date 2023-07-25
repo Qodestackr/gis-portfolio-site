@@ -1,5 +1,6 @@
 import Navbar from "../navbar/Navbar";
-export default function Header() {
+
+function Header() {
   return (
     <header className="h-screen p-4 text-white bg-[#23272F]" id="home">
       <Navbar />
@@ -32,3 +33,6 @@ export default function Header() {
     </header>
   );
 }
+
+
+export default Header

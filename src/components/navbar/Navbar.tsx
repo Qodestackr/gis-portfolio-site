@@ -8,21 +8,23 @@ const menuItems = [
   { path: "/login", text: "Login", button: true, className: "p-3 bg-green-600 hover:bg-green-500 rounded-lg" },
 ];
 
-const Menu = () => (
-  <>
-    {menuItems.map((item, index) => (
-      <Link
-        key={index}
-        to={item.path}
-        className={`hover:bg-[#343A46] py-2 px-3 rounded-2xl ${item.button ? item.className : ""}`}
-      >
-        {item.text}
-      </Link>
-    ))}
-  </>
-);
+function Menu() {
+  return (
+    <>
+      {menuItems.map((item, index) => (
+        <Link
+          key={index}
+          to={item.path}
+          className={`hover:bg-[#343A46] py-2 px-3 rounded-2xl ${item.button ? item.className : ""}`}
+        >
+          {item.text}
+        </Link>
+      ))}
+    </>
+  );
+}
 
-const Navbar = () => {
+function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -54,6 +56,6 @@ const Navbar = () => {
       )}
     </nav>
   );
-};
+}
 
 export default Navbar;

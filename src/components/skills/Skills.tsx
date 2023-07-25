@@ -38,7 +38,7 @@ const otherToolsStacks: Stack[] = [
   { icon: SiGraphql, name: "GraphQL" },
 ];
 
-export default function Skills() {
+function Skills() {
   const renderStacks = (stacks: Stack[]) => {
     return stacks.map((stack) => (
       <div key={stack.name} className="flex flex-col space-y-2">
@@ -81,3 +81,5 @@ export default function Skills() {
     </section>
   );
 }
+
+export default Skills
