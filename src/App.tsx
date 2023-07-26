@@ -1,10 +1,12 @@
 import AppLayout from './AppLayout'
+import { UserContextProvider } from './context/UserContext';
 
 function App() {
+  
   return (
-    <AppLayout>
-      {/* CHILDREN HERE */}
-    </AppLayout>
+    <UserContextProvider>
+      <AppLayout>{/* CHILDREN HERE */}</AppLayout>
+    </UserContextProvider>
   );
 }
 
