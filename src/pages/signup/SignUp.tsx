@@ -21,10 +21,11 @@ const Signup = () => {
     );
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     console.log("Signup form submitted with location:", location);
   };
+
 
   return (
     <div className="bg-[#23272F] min-h-screen flex items-center justify-center">
