@@ -1,15 +1,14 @@
-import {
-  MapContainer,
-  Marker,
-  Popup,
-  TileLayer,
-} from "react-leaflet";
-
+import { useContext } from "react";
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { useUserContext } from "../../context/UserContext";
 
 type LatLngTuple = [number, number];
 
 function Map() {
-  const position: LatLngTuple = [-1.2921, 36.8219];
+  const { user } = useUserContext(); // Access the user data from the UserContext
+  console.log(user)
+
+  const position: LatLngTuple = user?.location || [-1.2921, 36.8219]; // Use the user's location if available, or use the default location
   const zoomLevel = 15;
 
   return (
